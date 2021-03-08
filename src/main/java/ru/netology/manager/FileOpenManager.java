@@ -10,8 +10,8 @@ public class FileOpenManager {
     }
 
     public void registerApp(String ext, String app) {
-        String ext1 = ext.toLowerCase();
-        hm.put(ext1, app);
+        String key = ext.toLowerCase();
+        hm.put(key, app);
     }
 
     public String getApp(String ext) {
