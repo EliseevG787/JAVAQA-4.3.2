@@ -14,13 +14,13 @@ class FileOpenManagerTest {
     @Nested
     public class Empty {
         @Test
-        void getApp() {
+        void shouldGetApp() {
             String actual = manager.getApp("html");
             assertEquals(null, actual);
         }
 
         @Test
-        void removeApp() {
+        void shouldRemoveApp() {
             manager.removeApp("html");
 
             Map<String, String> expected = new HashMap<String, String>();
@@ -29,7 +29,7 @@ class FileOpenManagerTest {
         }
 
         @Test
-        void getListExt() {
+        void shouldGetListExt() {
             List<String> expected = new ArrayList<>();
             List<String> actual = manager.getListExt();
             assertEquals(expected, actual);
@@ -37,7 +37,7 @@ class FileOpenManagerTest {
         }
 
         @Test
-        void getListApp() {
+        void shouldGetListApp() {
             List<String> expected = new ArrayList<>();
             List<String> actual = manager.getListApp();
             assertEquals(expected, actual);
@@ -53,13 +53,13 @@ class FileOpenManagerTest {
         }
 
         @Test
-        void getApp() {
+        void shouldGetApp() {
             String actual = manager.getApp("html");
             assertEquals("Chrome", actual);
         }
 
         @Test
-        void removeApp() {
+        void shouldRemoveApp() {
             manager.removeApp("html");
 
             Map<String, String> expected = new HashMap<String, String>();
@@ -68,7 +68,7 @@ class FileOpenManagerTest {
         }
 
         @Test
-        void getListExt() {
+        void shouldGetListExt() {
             List<String> expected = new ArrayList<>(List.of("html"));
             List<String> actual = manager.getListExt();
             assertEquals(expected, actual);
@@ -76,7 +76,7 @@ class FileOpenManagerTest {
         }
 
         @Test
-        void getListApp() {
+        void shouldGetListApp() {
             List<String> expected = new ArrayList<>(List.of("Chrome"));
             List<String> actual = manager.getListApp();
             assertEquals(expected, actual);
@@ -94,19 +94,19 @@ class FileOpenManagerTest {
         }
 
         @Test
-        void getApp() {
+        void shouldGetApp() {
             String actual = manager.getApp("html");
             assertEquals("Chrome", actual);
         }
 
         @Test
-        void getAppIfNotExist() {
+        void shouldGetAppIfNotExist() {
             String actual = manager.getApp("htm");
             assertEquals(null, actual);
         }
 
         @Test
-        void removeApp() {
+        void shouldRemoveApp() {
             manager.removeApp("html");
 
             Map<String, String> expected = new HashMap<String, String>();
@@ -117,7 +117,7 @@ class FileOpenManagerTest {
         }
 
         @Test
-        void removeAppIfNotExist() {
+        void shouldRemoveAppIfNotExist() {
             manager.removeApp("htm");
 
             Map<String, String> expected = new HashMap<String, String>();
@@ -129,7 +129,7 @@ class FileOpenManagerTest {
         }
 
         @Test
-        void getListExt() {
+        void shouldGetListExt() {
             List<String> expected = new ArrayList<>(List.of("html", "jpg", "mp4"));
             List<String> actual = manager.getListExt();
             assertEquals(expected, actual);
@@ -137,7 +137,7 @@ class FileOpenManagerTest {
         }
 
         @Test
-        void getListApp() {
+        void shouldGetListApp() {
             List<String> expected = new ArrayList<>(List.of("Chrome", "Paint", "PlayerWM"));
             List<String> actual = manager.getListApp();
             assertEquals(expected, actual);
