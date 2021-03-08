@@ -9,7 +9,7 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FileOpenManagerTest {
-    FileOpenManager manager = new FileOpenManager();
+    private FileOpenManager manager = new FileOpenManager();
 
     @Nested
     public class Empty {
